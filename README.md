@@ -88,8 +88,40 @@ module "single_resource_group" {
 No issue is creating limit on this module.
 
 <!--- BEGIN_TF_DOCS --->
+## Requirements
 
+| Name | Version |
+|------|---------|
+| terraform | >= 0.14.0, <= 1.0.0 |
+| azurerm | >= 2.30.0, <= 2.56.0 |
 
+## Providers
+
+| Name | Version |
+|------|---------|
+| azurerm | >= 2.30.0, <= 2.56.0 |
+
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| rgs | A list of resource group objects | <pre>list(<br>    object({<br>      name     = string<br>      location = string<br>      tags     = map(string)<br>    })<br>  )</pre> | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| id | The ID of the Resource Group |
 
 <!--- END_TF_DOCS --->
 
