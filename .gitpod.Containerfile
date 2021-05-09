@@ -16,6 +16,7 @@ RUN \
     sudo \
     bash \
     procps \
+    build-essential \
     openssl \
     gnupg \
     lsb-release \
@@ -37,6 +38,7 @@ RUN  \
   rm -rf /usr/local/go && tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz
 
 ENV PATH=$PATH:/usr/local/go/bin
+ENV GO111MODULE="on go get golang.org/x/tools/gopls@latest"
 
 # Install Terraform
 RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
