@@ -24,3 +24,4 @@ vscode:
   extensions:
     - hashicorp.terraform@2.6.0:2DAfyr2B9Qtys7l5BMKjjg==
     - yzhang.markdown-all-in-one@3.4.0:GR9Y7wA3m2/LsuZxLaCFtg==
+    - golang.go
