@@ -17,6 +17,6 @@ locals {
     "Terraform Managed"           = true
     "Terraform Module Name"       = "Azure Resource Group"
     "Terraform Module Version"    = "v0.0.0"
-    "Terraform Module SourceCode" = "https://github.com/jortfal/azure-resource-group"
+    "Terraform Module SourceCode" = "https://github.com/jortfal/terraform-azure-resource-group"
   }
 }
