@@ -2,10 +2,10 @@
 
 [Terraform](https://www.terraform.io/) module for create [Resource Groups](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group) on Microsoft Azure.
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/jortfal/azure-resource-group)
-![GitHub Release Date](https://img.shields.io/github/release-date/jortfal/azure-resource-group)
-![GitHub license](https://img.shields.io/github/license/jortfal/azure-resource-group)
-[![Build Status](https://github.com/jortfal/semantic-release-terraform-config/workflows/Test/badge.svg)](https://github.com/jortfal/azure-resource-group/actions?query=workflow%3ATest+branch%3Amaster) 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/jortfal/terraform-azure-resource-group)
+![GitHub Release Date](https://img.shields.io/github/release-date/jortfal/terraform-azure-resource-group)
+![GitHub license](https://img.shields.io/github/license/jortfal/terraform-azure-resource-group)
+[![Build Status](https://github.com/jortfal/semantic-release-terraform-config/workflows/Test/badge.svg)](https://github.com/jortfal/terraform-azure-resource-group/actions?query=workflow%3ATest+branch%3Amaster) 
 ![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green)
 ![Maintainer](https://img.shields.io/badge/maintainer-jortfal-green)
 
@@ -16,7 +16,7 @@
 ```hcl
 module "single_resource_group" {
 
-  source = "git@github.com:jortfal/azure-resource-group.git?ref=vX.Y.Z
+  source = "git@github.com:jortfal/terraform-azure-resource-group.git?ref=vX.Y.Z
 
   rgs = [
     {
@@ -36,7 +36,7 @@ module "single_resource_group" {
 ```hcl
 module "single_resource_group" {
 
-  source = "git@github.com:jortfal/azure-resource-group.git?ref=vX.Y.Z
+  source = "git@github.com:jortfal/terraform-azure-resource-group.git?ref=vX.Y.Z
 
   rgs = [
     {
@@ -131,4 +131,4 @@ Module created and managed by `@jortfal` [José Manuel Ortega Falcón](https://w
 
 ## License
 
-Apache 2 Licensed. See `LICENSE` file for full details.
+Apache 2 Licensed. See [`LICENSE`](https://github.com/jortfal/terraform-azure-resource-group/blob/main/LICENSE) file for full details.
