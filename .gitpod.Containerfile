@@ -1,6 +1,7 @@
 FROM debian:buster-20210111-slim
 
 ARG DEBIAN_FRONTEND=noninteractive
+ARG GO_VERSION=1.16.4
 ARG TERRAFORM_VERSION=0.15.0
 ARG TFLINT_VERSION=v0.26.0
 ARG TFSEC_VERSION=v0.39.21
@@ -29,6 +30,13 @@ RUN \
 
 # Install Pre-Commit - A framework for managing and maintaining multi-language pre-commit hooks
 RUN pip3 install pre-commit
+
+# Install Golang
+RUN  \
+  wget https://golang.org/dl/go$GO_VERSION.linux-amd64.tar.gz && \
+  rm -rf /usr/local/go && tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz
+
+ENV PATH=$PATH:/usr/local/go/bin
 
 # Install Terraform
 RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
