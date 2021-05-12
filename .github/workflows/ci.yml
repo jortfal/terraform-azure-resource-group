@@ -16,7 +16,7 @@ jobs:
     steps:
     
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
 
       - name: HashiCorp - Setup Terraform
         uses: hashicorp/setup-terraform@v1
@@ -63,7 +63,7 @@ jobs:
     steps:
       
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
         with:
           ref: ${{ github.event.pull_request.head.ref }}
 
