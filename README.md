@@ -92,36 +92,36 @@ No issue is creating limit on this module.
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.14.0, <= 1.0.0 |
-| azurerm | >= 2.30.0, <= 2.56.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14.0, <= 1.0.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 2.30.0, <= 2.56.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| azurerm | >= 2.30.0, <= 2.56.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 2.30.0, <= 2.56.0 |
 
 ## Modules
 
-No Modules.
+No modules.
 
 ## Resources
 
-| Name |
-|------|
-| [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) |
+| Name | Type |
+|------|------|
+| [azurerm_resource_group.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| rgs | A list of resource group objects | <pre>list(<br>    object({<br>      name     = string<br>      location = string<br>      tags     = map(string)<br>    })<br>  )</pre> | n/a | yes |
+| <a name="input_rgs"></a> [rgs](#input\_rgs) | A list of resource group objects | <pre>list(<br>    object({<br>      name     = string<br>      location = string<br>      tags     = map(string)<br>    })<br>  )</pre> | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| id | The ID of the Resource Group |
+| <a name="output_id"></a> [id](#output\_id) | The ID of the Resource Group |
 
 <!--- END_TF_DOCS --->
 
