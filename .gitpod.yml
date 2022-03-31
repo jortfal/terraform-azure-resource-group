@@ -15,12 +15,11 @@ tasks:
     command: git config --global user.name "jortfal" &&
              git config --global user.email "jortfal@users.noreply.github.com" &&
              git config --global commit.gpgsign true &&
-             git config --global user.signingkey C62738C0CBE3CDCA &&
+             git config --global user.signingkey 92CB4C9BA0DDDDB9 &&
              touch private.gpg &&
              echo 'WARNING!!! Do not forget to import the private gpg key ;)' &&
              echo 'use "gpg --import private.gpg" to import private key '
 
 vscode:
   extensions:
-    - hashicorp.terraform@2.6.0:2DAfyr2B9Qtys7l5BMKjjg==
-    - yzhang.markdown-all-in-one@3.4.0:GR9Y7wA3m2/LsuZxLaCFtg==
+    - hashicorp.terraform

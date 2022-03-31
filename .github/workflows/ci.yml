@@ -21,7 +21,7 @@ jobs:
       - name: HashiCorp - Setup Terraform
         uses: hashicorp/setup-terraform@v1.3.2
         with:
-          terraform_version: 0.15.0
+          terraform_version: 1.1.7
 
       - name: Terraform fmt
         id: fmt
@@ -31,7 +31,7 @@ jobs:
       - name: Install TFLint
         uses: terraform-linters/setup-tflint@v2
         with:
-          tflint_version: v0.26.0
+          tflint_version: v0.35.0
 
       - name: Check linting of Terraform files
         id: lint
@@ -47,7 +47,7 @@ jobs:
 
       - name: Install TFSec
         run: |
-          curl -L https://github.com/tfsec/tfsec/releases/download/v0.39.21/tfsec-linux-amd64 -o tfsec && \
+          curl -L https://github.com/tfsec/tfsec/releases/download/v1.15.2/tfsec-linux-amd64 -o tfsec && \
           sudo chmod +x tfsec && \
           sudo mv tfsec /usr/local/bin/tfsec
 
@@ -70,7 +70,7 @@ jobs:
       - name: HashiCorp - Setup Terraform
         uses: hashicorp/setup-terraform@v1.3.2
         with:
-          terraform_version: 0.15.0
+          terraform_version: 1.1.7
       
       - name: Render terraform docs and push changes back to PR
         uses: terraform-docs/gh-actions@v1
