@@ -1,4 +1,4 @@
-FROM debian:buster-20210111-slim
+FROM debian:bullseye-20220328-slim
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG TERRAFORM_VERSION=0.15.0
