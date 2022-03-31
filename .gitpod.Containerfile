@@ -25,7 +25,8 @@ RUN \
     wget \
     unzip \
     python3-pip \
-    vim 
+    vim \
+    git
 
 # Install Pre-Commit - A framework for managing and maintaining multi-language pre-commit hooks
 RUN pip3 install pre-commit
