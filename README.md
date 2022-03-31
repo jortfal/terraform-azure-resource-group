@@ -122,7 +122,6 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_id"></a> [id](#output\_id) | The ID of the Resource Group |
-
 <!-- END_TF_DOCS -->
 
 ## Authors
