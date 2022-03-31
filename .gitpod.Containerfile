@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ARG TERRAFORM_VERSION=1.1.7
 ARG TFLINT_VERSION=v0.35.0
 ARG TFSEC_VERSION=v0.39.21
-ARG TERRAFORM_DOCS_VERSION=v0.12.1
+ARG TERRAFORM_DOCS_VERSION=v0.16.0
 
 # Update Local Repository Index and Install apt-utils
 RUN apt-get update && apt-get -y --no-install-recommends install apt-utils
