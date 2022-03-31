@@ -87,7 +87,7 @@ module "single_resource_group" {
 
 No issue is creating limit on this module.
 
-<!--- BEGIN_TF_DOCS --->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -122,8 +122,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_id"></a> [id](#output\_id) | The ID of the Resource Group |
-
-<!--- END_TF_DOCS --->
+<!-- END_TF_DOCS -->
 
 ## Authors
 
