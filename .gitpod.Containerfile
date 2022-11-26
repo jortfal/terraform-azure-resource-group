@@ -5,6 +5,7 @@ ARG TERRAFORM_VERSION=1.1.7
 ARG TFLINT_VERSION=v0.35.0
 ARG TFSEC_VERSION=v1.15.2
 ARG TERRAFORM_DOCS_VERSION=v0.16.0
+ARG GO_VERSION=1.18
 
 # Update Local Repository Index and Install apt-utils
 RUN apt-get update && apt-get -y --no-install-recommends install apt-utils
@@ -26,7 +27,8 @@ RUN \
     unzip \
     python3-pip \
     vim \
-    git
+    git \
+    gcc
 
 # Install Pre-Commit - A framework for managing and maintaining multi-language pre-commit hooks
 RUN pip3 install pre-commit
@@ -53,6 +55,13 @@ RUN \
   tar -xzf terraform-docs.tar.gz && \
   sudo chmod +x terraform-docs && \
   sudo mv terraform-docs /usr/local/bin/terraform-docs
+
+# Install Golang
+RUN  \
+  wget https://golang.org/dl/go$GO_VERSION.linux-amd64.tar.gz && \
+  rm -rf /usr/local/go && tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz
+
+ENV PATH=$PATH:/usr/local/go/bin
 
 # Install the Azure CLI
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
