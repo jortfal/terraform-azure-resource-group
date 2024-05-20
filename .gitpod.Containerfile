@@ -1,10 +1,10 @@
-FROM debian:bullseye-20220328-slim
+FROM debian:bookworm-slim
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG TERRAFORM_VERSION=1.1.7
-ARG TFLINT_VERSION=v0.35.0
-ARG TFSEC_VERSION=v1.15.2
-ARG TERRAFORM_DOCS_VERSION=v0.16.0
+ARG TERRAFORM_VERSION=1.8.3
+ARG TFLINT_VERSION=v0.51.1
+ARG TFSEC_VERSION=v1.28.6
+ARG TERRAFORM_DOCS_VERSION=v0.17.0
 
 # Update Local Repository Index and Install apt-utils
 RUN apt-get update && apt-get -y --no-install-recommends install apt-utils
