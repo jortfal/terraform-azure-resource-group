@@ -2,7 +2,7 @@
 
 This folder contains a set of Terraform manifest for deploying a resource group, that is a container that holds related resources for an Azure solution.
 
-The end result of this example should be a resource group named 'et-test-weu-rg-example-001'.
+The end result of this example should be a resource group named 'jortfal-test-weu-rg-example-000'.
 
 To understand more about Azure Resource Group, check out the [Azure Resource Group documentation](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal).
 

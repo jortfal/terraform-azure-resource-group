@@ -14,48 +14,48 @@ See the License for the specific language governing permissions and
 limitations under the License. 
 */
 
-module "single_resource_group" {
+module "multiple_resource_group" {
   source = "../../"
 
-  rgs = [
+  resource_group_list = [
     {
-      name     = "et-test-weu-rg-example-001"
+      name     = "jortfal-test-weu-rg-example-001"
       location = "West Europe"
       tags = {
-        Owner       = "jortfal"
-        Environment = "test"
+        Owner       = "Jortfal"
+        Environment = "Test"
       }
     },
     {
-      name     = "et-test-weu-rg-example-002"
+      name     = "jortfal-test-weu-rg-example-002"
       location = "West Europe"
       tags = {
-        Owner       = "jortfal"
-        Environment = "test"
+        Owner       = "Jortfal"
+        Environment = "Test"
       }
     },
     {
-      name     = "et-test-weu-rg-example-003"
+      name     = "jortfal-test-weu-rg-example-003"
       location = "West Europe"
       tags = {
-        Owner       = "jortfal"
-        Environment = "test"
+        Owner       = "Jortfal"
+        Environment = "Test"
       }
     },
     {
-      name     = "et-test-weu-rg-example-004"
+      name     = "jortfal-test-weu-rg-example-004"
       location = "West Europe"
       tags = {
-        Owner       = "jortfal"
-        Environment = "test"
+        Owner       = "Jortfal"
+        Environment = "Test"
       }
     },
     {
-      name     = "et-test-weu-rg-example-005"
+      name     = "jortfal-test-weu-rg-example-005"
       location = "West Europe"
       tags = {
-        Owner       = "jortfal"
-        Environment = "test"
+        Owner       = "Jortfal"
+        Environment = "Test"
       }
     }
   ]

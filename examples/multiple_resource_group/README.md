@@ -4,11 +4,11 @@ This folder contains a set of Terraform manifest for deploying five resource gro
 
 The end result of this example should be five resource group named:
 
-- 'et-test-weu-rg-example-001'
-- 'et-test-weu-rg-example-002'
-- 'et-test-weu-rg-example-003'
-- 'et-test-weu-rg-example-004'
-- 'et-test-weu-rg-example-005'
+- 'jortfal-test-weu-rg-example-001'
+- 'jortfal-test-weu-rg-example-002'
+- 'jortfal-test-weu-rg-example-003'
+- 'jortfal-test-weu-rg-example-004'
+- 'jortfal-test-weu-rg-example-005'
 
 To understand more about Azure Resource Group, check out the [Azure Resource Group documentation](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal).
 

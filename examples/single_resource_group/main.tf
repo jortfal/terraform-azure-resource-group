@@ -18,13 +18,13 @@ module "single_resource_group" {
 
   source = "../../"
 
-  rgs = [
+  resource_group_list = [
     {
-      name     = "et-test-weu-rg-example-001"
-      location = "West Europe"
+      name       = "jortfal-test-weu-rg-example-000"
+      location   = "West Europe"
       tags = {
-        Owner       = "jortfal"
-        Environment = "test"
+        Owner       = "Jortfal"
+        Environment = "Test"
       }
     }
   ]
