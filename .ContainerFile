@@ -1,7 +1,7 @@
 FROM debian:bookworm-slim
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG TERRAFORM_VERSION=v1.8.3
+ARG TERRAFORM_VERSION=1.8.3-1
 ARG TFLINT_VERSION=v0.51.1
 ARG TFSEC_VERSION=v1.28.6
 ARG TERRAFORM_DOCS_VERSION=v0.17.0
@@ -32,7 +32,7 @@ RUN \
 RUN pip3 install pre-commit --break-system-packages
 
 # Install Terraform
-RUN wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+RUN wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg --yes
 RUN \
   echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list && \
   sudo apt-get update && \
