@@ -20,8 +20,8 @@ module "single_resource_group" {
 
   resource_group_list = [
     {
-      name       = "jortfal-test-weu-rg-example-000"
-      location   = "West Europe"
+      name     = "jortfal-test-weu-rg-example-000"
+      location = "West Europe"
       tags = {
         Owner       = "Jortfal"
         Environment = "Test"

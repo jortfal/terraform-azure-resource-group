@@ -11,9 +11,12 @@ See the License for the specific language governing permissions and
 limitations under the License. 
 */
 
-# Configure the Terraform settings
+# Configure the Terraform Settings
+# https://developer.hashicorp.com/terraform/language/settings
 terraform {
+  # Specifying a Required Terraform Version
   required_version = ">= 1.0.0, < 2.0.0"
+  # Specifying Provider Requirements
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
@@ -22,4 +25,8 @@ terraform {
   }
 }
 
-
+# Configure the Microsoft Azure Provider
+provider "azurerm" {
+  # Configuration options
+  features {}
+}
