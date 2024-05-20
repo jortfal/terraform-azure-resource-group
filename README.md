@@ -20,11 +20,11 @@ module "single_resource_group" {
 
   rgs = [
     {
-      name     = "et-prod-weu-rg-example-001"
+      name     = "jortfal-prod-weu-rg-example-000"
       location = "West Europe"
       tags = {
-        Owner       = "jortfal"
-        Environment = "production"
+        Owner       = "Jortfal"
+        Environment = "Production"
       }
     }
   ]
@@ -40,43 +40,43 @@ module "single_resource_group" {
 
   rgs = [
     {
-      name     = "et-prod-weu-rg-example-001"
+      name     = "jortfal-prod-weu-rg-example-001"
       location = "West Europe"
       tags = {
-        Owner       = "jortfal"
-        Environment = "production"
+        Owner       = "Jortfal"
+        Environment = "Production"
       }
     },
     {
-      name     = "et-prod-weu-rg-example-002"
+      name     = "jortfal-prod-weu-rg-example-002"
       location = "West Europe"
       tags = {
-        Owner       = "jortfal"
-        Environment = "production"
+        Owner       = "Jortfal"
+        Environment = "Production"
       }
     },
     {
-      name     = "et-prod-weu-rg-example-003"
+      name     = "jortfal-prod-weu-rg-example-003"
       location = "West Europe"
       tags = {
-        Owner       = "jortfal"
-        Environment = "production"
+        Owner       = "Jortfal"
+        Environment = "Production"
       }
     },
     {
-      name     = "et-prod-weu-rg-example-004"
+      name     = "jortfal-prod-weu-rg-example-004"
       location = "West Europe"
       tags = {
-        Owner       = "jortfal"
-        Environment = "production"
+        Owner       = "Jortfal"
+        Environment = "Production"
       }
     },
     {
-      name     = "et-prod-weu-rg-example-005"
+      name     = "jortfal-prod-weu-rg-example-005"
       location = "West Europe"
       tags = {
-        Owner       = "jortfal"
-        Environment = "production"
+        Owner       = "Jortfal"
+        Environment = "Production"
       }
     }
   ]
