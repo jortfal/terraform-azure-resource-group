@@ -29,7 +29,7 @@ RUN \
     git
 
 # Install Pre-Commit - A framework for managing and maintaining multi-language pre-commit hooks
-RUN pip3 install pre-commit
+RUN pip3 install pre-commit --break-system-packages
 
 # Install Terraform
 RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
