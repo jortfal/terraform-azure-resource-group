@@ -15,10 +15,12 @@ limitations under the License.
 */
 
 resource "azurerm_resource_group" "this" {
-  count = length(var.rgs)
+  count = length(var.resource_group_list)
 
-  name     = var.rgs[count.index].name
-  location = var.rgs[count.index].location
+  name     = var.resource_group_list[count.index].name
+  location = var.resource_group_list[count.index].location
 
-  tags = merge(local.terraform_module_tags, var.rgs[count.index].tags)
+  managed_by = var.resource_group_list[count.index].managed_by
+
+  tags = merge(local.terraform_module_tags, var.resource_group_list[count.index].tags)
 }

@@ -14,13 +14,14 @@ See the License for the specific language governing permissions and
 limitations under the License. 
 */
 
-variable "rgs" {
+variable "resource_group_list" {
   description = "A list of resource group objects"
   type = list(
     object({
-      name     = string
-      location = string
-      tags     = map(string)
+      name       = string                      // The Azure Region where the Resource Group should exist. Changing this forces a new Resource Group to be created.
+      location   = string                      // The Name which should be used for this Resource Group. Changing this forces a new Resource Group to be created.
+      managed_by = optional(string, null)      // The ID of the resource or application that manages this Resource Group.
+      tags       = optional(map(string), null) // A mapping of tags which should be assigned to the Resource Group.
     })
   )
 }

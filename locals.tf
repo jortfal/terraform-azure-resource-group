@@ -16,7 +16,7 @@ locals {
   terraform_module_tags = {
     "Terraform Managed"           = true
     "Terraform Module Name"       = "Azure Resource Group"
-    "Terraform Module Version"    = "v1.1.1"
+    "Terraform Module Version"    = "v2.1.0"
     "Terraform Module SourceCode" = "https://github.com/jortfal/terraform-azure-resource-group"
   }
 }
