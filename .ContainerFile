@@ -32,11 +32,11 @@ RUN \
 RUN pip3 install pre-commit --break-system-packages
 
 # Install Terraform
-RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+RUN wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg  && \
+  echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 RUN \
-  sudo apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main" && \
   sudo apt-get update && \
-  apt-get -y --no-install-recommends install terraform=$TERRAFORM_VERSION
+  sudo apt-get -y --no-install-recommends install terraform=$TERRAFORM_VERSION
 
 # Install TFLint - A Pluggable Terraform Linter
 RUN curl https://raw.githubusercontent.com/terraform-linters/tflint/$TFLINT_VERSION/install_linux.sh | bash
