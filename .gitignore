@@ -35,3 +35,6 @@ terraform.rc
 
 # Ignore terraform init lock file
 .terraform.lock.hcl
+
+# Ignore TFLint plugin directory (plugins are downloaded via tflint --init)
+.tflint.d/

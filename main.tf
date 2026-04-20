@@ -17,8 +17,9 @@ limitations under the License.
 resource "azurerm_resource_group" "this" {
   count = length(var.rgs)
 
-  name     = var.rgs[count.index].name
-  location = var.rgs[count.index].location
+  name       = var.rgs[count.index].name
+  location   = var.rgs[count.index].location
+  managed_by = var.rgs[count.index].managed_by
 
   tags = merge(local.terraform_module_tags, var.rgs[count.index].tags)
 }

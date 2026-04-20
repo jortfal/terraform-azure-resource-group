@@ -5,8 +5,8 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/jortfal/terraform-azure-resource-group)
 ![GitHub Release Date](https://img.shields.io/github/release-date/jortfal/terraform-azure-resource-group)
 ![GitHub license](https://img.shields.io/github/license/jortfal/terraform-azure-resource-group)
-[![Build Status](https://github.com/jortfal/semantic-release-terraform-config/workflows/Test/badge.svg)](https://github.com/jortfal/terraform-azure-resource-group/actions?query=workflow%3ATest+branch%3Amaster) 
-![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green)
+[![Build Status](https://github.com/jortfal/terraform-azure-resource-group/workflows/Continuous%20Integration/badge.svg)](https://github.com/jortfal/terraform-azure-resource-group/actions?query=workflow%3A%22Continuous+Integration%22+branch%3Amain) 
+![Maintenance](https://img.shields.io/maintenance/yes/2026?color=green)
 ![Maintainer](https://img.shields.io/badge/maintainer-jortfal-green)
 
 ## Usage
@@ -92,14 +92,14 @@ No issue is creating limit on this module.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0, < 2.0.0 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 2.30.0, < 4.0.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0, < 2.0.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 4.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 2.30.0, < 4.0.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 4.0 |
 
 ## Modules
 
@@ -115,7 +115,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_rgs"></a> [rgs](#input\_rgs) | A list of resource group objects | <pre>list(<br>    object({<br>      name     = string<br>      location = string<br>      tags     = map(string)<br>    })<br>  )</pre> | n/a | yes |
+| <a name="input_rgs"></a> [rgs](#input\_rgs) | A list of resource group objects | <pre>list(<br>    object({<br>      name       = string<br>      location   = string<br>      managed_by = optional(string)<br>      tags       = optional(map(string), {})<br>    })<br>  )</pre> | n/a | yes |
 
 ## Outputs
 

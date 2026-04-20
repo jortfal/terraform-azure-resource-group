@@ -18,9 +18,10 @@ variable "rgs" {
   description = "A list of resource group objects"
   type = list(
     object({
-      name     = string
-      location = string
-      tags     = map(string)
+      name       = string
+      location   = string
+      managed_by = optional(string)
+      tags       = optional(map(string), {})
     })
   )
 }

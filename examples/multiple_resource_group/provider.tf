@@ -15,7 +15,4 @@ limitations under the License.
 */
 
 # Configure the Azure provider
-provider "azurerm" {
-  # Configuration options
-  features {}
-}
+provider "azurerm" {}
