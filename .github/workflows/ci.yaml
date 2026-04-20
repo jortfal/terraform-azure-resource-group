@@ -50,15 +50,12 @@ jobs:
         id: validate
         run: terraform validate -no-color
 
-      - name: Install TFSec
-        run: |
-          curl -L https://github.com/aquasecurity/tfsec/releases/download/v1.28.14/tfsec-linux-amd64 -o tfsec && \
-          sudo chmod +x tfsec && \
-          sudo mv tfsec /usr/local/bin/tfsec
-
-      - name: TFSec
-        id: sec
-        run: tfsec
+      - name: Trivy Security Scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: config
+          scan-ref: .
+          exit-code: 1
 
   documentation:
     needs: continuous-integration
